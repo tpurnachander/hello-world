@@ -1,0 +1,18 @@
+word = " This   This is is is is   Terralogic Terralogic "
+
+words= word.split()
+
+print(words)
+large = [] 
+for i in words:
+  large.append(len(i))
+  print(len(i))
+
+print(large)
+
+indx = large.index(max(large))
+print("Largest string is %s "%words[indx]) 
+
+min_inx = large.index(min(large))
+
+print(" Smallest string : < %s > "%words[min_inx])
