@@ -1,0 +1,14 @@
+word = " Terralogic This    is    Terralogic Terralogic "
+
+words= word.split()
+
+print(words)
+
+repeat = []
+
+for i in words:
+  if i not in repeat:
+    repeat.append(i)
+  else:
+    print("first repeated string is < %s > "%i)
+    break
