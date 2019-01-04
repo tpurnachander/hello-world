@@ -1,0 +1,33 @@
+name = 'abcdcbd'
+
+#in_string = input(" Enter a substring : ")
+
+list_name=list(name)
+
+list_name_bkp = list_name.copy()
+
+list_name.reverse()
+print(list_name)
+
+print(list_name_bkp)
+
+if list_name_bkp == list_name:
+  print("palindrome")
+else:
+  print("not a palindrome")
+
+Len = len(list_name)
+
+for j in range(Len):
+  i=j
+  while(i < Len and list_name[i] == list_name_bkp[i]):
+    i+=1
+    continue
+  if i != j:
+    print()
+
+
+
+
+
+
