@@ -1,0 +1,7 @@
+num = int(input(" Enter how many numbers u want to see : "))
+
+for i in range(num):
+  if i % 2 == 0:
+    print("square of %s is %s"%(i,i**2))
+  else:
+    print("cube of %s is %s"%(i,i**3))
