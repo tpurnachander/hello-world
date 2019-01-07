@@ -1,0 +1,27 @@
+string = 'a+b-{(c/d}+a)*c]^2'
+
+sq = 0
+fl = 0
+paran = 0
+
+list_string = list(string)
+
+for i in list_string:
+  if i == '[':
+    sq+=1
+  elif i == ']':
+    sq+=1
+  elif i == '{':
+    fl+=1
+  elif i == '}':
+    fl+=1
+  elif i == '(':
+    paran +=1
+  elif i == ')':
+    paran+=1
+#print("sq  %s fl %s paran %s"%(sq,fl,paran))
+
+if sq %2 == 0 and fl %2 ==0 and paran % 2 == 0:
+  print("Valid string")
+else:
+  print(" invalid string")
