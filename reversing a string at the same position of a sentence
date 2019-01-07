@@ -16,5 +16,42 @@ new_list = ' '.join(new_list)
 
 print(new_list)
   
+===================================================
+
+#from data import *
+
+file = open("data.py","r")
+
+new_list=[]
+for line in file:
+  print(line)
+  string = line
+
+  
+  print(" input string : %s"%string)
+  words = string.split()
+
+#print(words)
+
+  
+  for word in words:
+  #print(word)
+    new_list.append(word[::-1])
+
+#print(new_list)
+
+  new_list = ' '.join(new_list)
+
+  print(new_list)
+
+file.close()
+
+file = open("data.py","w")
+file.writelines(new_list)
+
+#file.close()
+  
+
+
 
 
