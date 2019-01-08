@@ -1,0 +1,20 @@
+=====================main.py====================
+
+from lib import *
+
+n = int(input(" Enter a number to know factorial : "))
+
+val = fact(n)
+
+print("Factorial of %s is %s"%(n,val))
+
+======lib.py ===================
+
+
+def fact(n):
+  output = 1
+  
+  for i in range(1,n+1):
+    output = output *i
+    
+  return output
