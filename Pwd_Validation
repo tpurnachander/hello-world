@@ -1,0 +1,31 @@
+string = input("Enter password: ")
+
+sp_string = string.split(',')
+lc=uc=dig=spc=length = 0
+
+for s in sp_string:
+
+  list_string = list(s)
+
+  for i in list_string:
+    print(i)
+    if ord(i) <= 122 and ord(i) >= 97:
+      lc =1
+    elif ord(i) <= 90 and ord(i) >= 65:
+      uc =1
+    elif ord(i) <= 57 and ord(i) >= 48:
+      dig=1
+    elif i == '$' or i == '#' or i == '@':
+      spc =1
+
+  Len = len(s)
+#print(" Len - %s , %s %s %s %s"%(Len,lc,uc,dig,spc))
+  if Len <= 12 and Len >= 6:
+      length =1
+  else:
+      print("Password not accepted")
+
+  if lc ==1 and uc ==1 and dig ==1 and spc ==1 and length == 1:
+      print("Password accepted %s"%s)
+  else:
+      print("Password Condition Failed %s , Try Again"%s)
