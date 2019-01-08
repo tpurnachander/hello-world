@@ -1,0 +1,33 @@
+main.py
+================================
+
+
+from file1 import *
+
+class original:
+
+  def __init__():
+    print(" Hello ")
+  
+  def importt():
+    sample.welcome()
+    print("This is Purna")
+
+
+cl = original
+
+original.importt()
+
+===============================
+
+file1.py
+
+==============================
+
+class sample:
+
+  def __init__():
+    print("hi, this is class called < sample >")
+  
+  def welcome():
+    print(" We are in a function called welcome() in class < sample>")
