@@ -1,0 +1,34 @@
+import json
+
+with open("file.txt","w") as f:
+  f.write(" Hi., this is the first line\n")
+  f.write(" This is the Second line\n")
+  f.write(" This is a simple program for read and write in Python\n ")
+
+
+
+with open("file.txt","a") as f:
+  value = ('the answer', 42)
+  s = str(value)
+  f.write(" Appending line now \n")
+  f.write(" Learning Python \n")
+  f.write("--End of file--\n")
+  print(s)
+    # convert the tuple to string
+  f.write(s)  
+
+with open("file.txt") as f:
+  lines = f.readlines()
+  for line in lines:
+    print(line)
+  print(" No. of lines are : %s"%len(lines))
+
+
+with open("jason.json","w") as f:
+  data = {
+    "president": {
+        "name": "Zaphod Beeblebrox",
+        "species": "Betelgeusian"
+    }
+  } 
+  json.dump(data,f,indent=4)
