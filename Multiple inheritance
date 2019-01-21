@@ -40,4 +40,7 @@ t.findArea()
 
 t.rightAngle()
 
-print(Triangle.__mro__)
+print(Triangle.__mro__) ---->>> returns Tuple
+
+print(Triangle.mro())  ---->>>>> returns list
+
