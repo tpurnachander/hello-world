@@ -1,0 +1,30 @@
+ins = input(" Enter a string : ")
+
+list_ins = list(ins)
+
+print(list_ins)
+
+pos_com =[]
+pos_dot = []
+count =0
+
+for i in list_ins:
+  
+  if i == '.':
+    pos_dot.append(count)
+  if i == ',':
+    pos_com.append(count)
+  count+=1
+
+#print(pos_dot)
+#print("\n")
+#print(pos_com)
+
+for i in pos_dot:
+  list_ins[i] = ','
+
+for i in pos_com:
+  list_ins[i] = '.'
+
+ins_output = ''.join(list_ins)
+print(ins_output)
