@@ -1,0 +1,18 @@
+string = "ttteeeerralogiccc"
+
+list_str = string.split()
+dl ={}
+for i in string:
+  dl[i] = ''
+
+#print(dl.items())
+
+for key in dl.keys():
+  count =0
+  for i in string:
+    if key == i:
+      count+=1
+  dl[key] = count
+
+
+print(dl.items())
