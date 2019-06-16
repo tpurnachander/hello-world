@@ -1,0 +1,33 @@
+
+
+def sq(func):
+  def wrap_sq(*args,**kwargs): 
+    sq_val1 = args[0] *  args[0]
+    sq_val2 = args[1] *  args[1]
+    print("sq : {}".format(func.__name__))
+    print("squares are : %s ..,, %s"%(sq_val1,sq_val2))
+    ret = func(*args,**kwargs)
+    print("sum is %s"%ret)
+
+  return wrap_sq
+
+
+def mul(func):
+  def wrap_mul(*args,**kwargs):
+    v = args[0] * args[1]
+    print("mul : {}".format(func.__name__))
+
+    print("mul = %s"%v)
+    
+    fv = func(*args,**kwargs)
+    print("sum : %s , mul is %s"%(fv,v))
+    return fv
+  return wrap_mul
+
+@sq
+@mul 
+def sum(x,y):
+    return x+y
+
+
+sum(2,4)
