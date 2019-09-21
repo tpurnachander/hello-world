@@ -1,0 +1,13 @@
+def f():
+  
+  def welcome(y):
+    print("Hi !! Welcome {}".format(y))
+
+  return welcome
+
+
+new_person = f()
+
+new_person("Purna Chander")
+
+new_person("Anrup Krishna")
